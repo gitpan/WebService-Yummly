@@ -22,7 +22,7 @@ my %WriteMakefileArgs = (
   "NAME" => "WebService::Yummly",
   "PREREQ_PM" => {},
   "TEST_REQUIRES" => {},
-  "VERSION" => "0.2",
+  "VERSION" => "0.3",
   "test" => {
     "TESTS" => "t/*.t"
   }

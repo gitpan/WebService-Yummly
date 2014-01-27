@@ -4,18 +4,39 @@ WebService::Yummly - Simple interface to the search and recipe interface to Yumm
 
 =head1 SYNOPSIS
 
+  $y = WebService::Yummly->new($APP_ID, $APP_KEY);
+  $recipes = $y->search("lamb shank");
+
+  my $r = WebService::Yummly->new($APP_ID, $APP_KEY, "Sunday-Supper_-Curried-Lamb-Shanks-Serious-Eats-42000");
+  ok($r,"new yummly");
+
+  my $recipe = $r->get_recipe ;
 
 
 =head1 DESCRIPTION
 
+  Search and retrieve recipe from Yummly
 
 =head1 FUNCTIONS
 
 =head2 new
 
+  $y = WebService::Yummly->new($APP_ID, $APP_KEY);
+
+Create a new Yummly object passing in credentials.
+
 =head2 search
 
+  $recipes = $y->search("lamb shank") ;
+
+Return a JSON structure containing matching recipes.
+
 =head2 get_recipe
+
+  my $r = WebService::Yummly->new($APP_ID, $APP_KEY, "Sunday-Supper_-Curried-Lamb-Shanks-Serious-Eats-42000");
+  my $recipe = $r->get_recipe ;
+
+Return a JSON data structure with recipe information.
 
 =head1 DIAGNOSTICS
 

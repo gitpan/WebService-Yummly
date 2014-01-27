@@ -9,7 +9,7 @@ use URL::Encode;
 use WebService::Simple;
 use Data::Dumper;
 
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 
 sub new {
     my ($class, $APP_ID, $APP_KEY, $id) = @_ ;
